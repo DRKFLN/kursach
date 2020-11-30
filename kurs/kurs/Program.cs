@@ -21,7 +21,8 @@ namespace Курсач1
             while (true)
             {
                 Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
-                if (variable == 1)
+                variable = Convert.ToInt32(Console.ReadLine());
+                 if (variable == 1)
                 {
                     procent = 1;
                     dolg = 1000000;
@@ -64,7 +65,10 @@ namespace Курсач1
     {
         //кредит
         double s = 1000000;
-        //double b = 1 + 0.01;
+        double b;
+        double x1 = 510000;
+        double x2 = 649000;
+
 
         public void text()
         {

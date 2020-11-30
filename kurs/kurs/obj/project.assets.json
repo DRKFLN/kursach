@@ -8,31 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\arata\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/home/drkfln/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
+      "projectUniqueName": "/home/drkfln/GitHub/kursach/kurs/kurs/kurs.csproj",
       "projectName": "kurs",
-      "projectPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
-      "packagesPath": "C:\\Users\\arata\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\obj\\",
+      "projectPath": "/home/drkfln/GitHub/kursach/kurs/kurs/kurs.csproj",
+      "packagesPath": "/home/drkfln/.nuget/packages/",
+      "outputPath": "/home/drkfln/GitHub/kursach/kurs/kurs/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\arata\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/home/drkfln/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -57,13 +50,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
