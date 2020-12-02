@@ -21,6 +21,7 @@ namespace Курсач1
             while (true)
             {
                 Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
+                variable = Convert.ToInt32(Console.ReadLine());
                 if (variable == 1)
                 {
                     procent = 1;
@@ -47,14 +48,13 @@ namespace Курсач1
             do
             {
                 dolg *= (1 + procent / 100);
-                Console.WriteLine(dolg);
                 if (dolg < platezh || dolg == platezh)
                 {
                     platezh = dolg;
                 }
                 dolg -= platezh;
                 mounth += 1;
-                Console.WriteLine("В " + mounth + "-м месяце долг будет равен " + dolg);
+                Console.WriteLine("В " + mounth + "-м месяце долг будет равен " + dolg + " процент = " + procent);
             }
             while (dolg > 0);
             Console.WriteLine("Ответ: При данных условиях Павел Витальевич может взять кредит на " + --mounth + " месяцев");
@@ -64,7 +64,9 @@ namespace Курсач1
     {
         //кредит
         double s = 1000000;
-        //double b = 1 + 0.01;
+        double x1 = 510000;
+        double x2 = 649000;
+        //double b = 1 + b/100;
 
         public void text()
         {
@@ -83,15 +85,10 @@ namespace Курсач1
     }
     class Task3
     {
-        double s = 57.5;
         double r = 3;
         double b = 1.03;
-        double n = 9;
-        double result;
-        double dolgSprocentom;
-        double viplata;
-        double dolgPosleViplati;
-        int mounth;
+        int n = 9;
+        double S;
         public void text()
         {
             Console.WriteLine("15 января планируется взять кредит в банке на 9 месяцев. Условия его возврата таковы:\n");
@@ -107,7 +104,7 @@ namespace Курсач1
         public void getresult()
         {
             //Долга с процентом
-            s *= b;
+            //s *= b;
 
             //
             //Выплата
