@@ -5,11 +5,11 @@ namespace Курсач1
 {
     class Task1
     {
-        double procent;
-        double dolg;
-        double platezh;
-        double mounth;
-        int variable;
+        double percent;//процент
+        double debt;//долг
+        double payment;//платеж
+        double mounth;//счетчик месяца
+        int variable;//переменная для определения выбора
         public void Text()
         {
             Console.WriteLine("1 января 2015 года Павел Витальевич взял в банке 1 млн. рублей в кредит.");
@@ -25,20 +25,20 @@ namespace Курсач1
                  if (variable == 1)
 
                 {
-                    procent = 1;
-                    dolg = 1000000;
-                    platezh = 125000;
+                    percent = 1;
+                    debt = 1000000;
+                    payment = 125000;
                     mounth = 0;
                     break;
                 }
                 else if (variable == 2)
                 {
                     Console.Write("\nВведите сумму долга: ");
-                    dolg = double.Parse(Console.ReadLine());
+                    debt = double.Parse(Console.ReadLine());
                     Console.Write("Введите сумму платежа: ");
-                    platezh = double.Parse(Console.ReadLine());
+                    payment = double.Parse(Console.ReadLine());
                     Console.Write("Укажите процент: ");
-                    procent = double.Parse(Console.ReadLine());
+                    percent = double.Parse(Console.ReadLine());
                     break;
                 }
             }
@@ -48,29 +48,28 @@ namespace Курсач1
         {
             do
             {
-                dolg *= (1 + procent / 100);
-                if (dolg < platezh || dolg == platezh)
+                debt *= (1 + percent / 100);
+                if (debt < payment || debt == payment)
                 {
-                    platezh = dolg;
+                    payment = debt;
                 }
-                dolg -= platezh;
+                debt -= payment;
                 mounth += 1;
-                Console.WriteLine("В " + mounth + "-м месяце долг будет равен " + dolg + " процент = " + procent);
+                Console.WriteLine("В " + mounth + "-м месяце долг будет равен " + debt + " процент = " + percent);
             }
-            while (dolg > 0);
+            while (debt > 0);
             Console.WriteLine("Ответ: При данных условиях Павел Витальевич может взять кредит на " + --mounth + " месяцев");
         }
     }
     class Task2
     {
-        //кредит
-        double s = 1000000;
-        double x1 = 510000;
-        double x2 = 649000;
-        double p;
-        
-
-
+        double credit; //кредит
+        double x1; //первая выплата
+        double x2; //вторая выплата
+        double percent; //процент с положительным знаком
+        double percentWithMinus;//процент с отрицательным знаком
+        double d;//дискриминант
+        int variable;//переменная выбора(нужна для работы интерфейса)
         public void Text()
         {
             Console.WriteLine("31 декабря 2014 года Антон взял в банке 1 млн. рублей в кредит. Схема");
@@ -80,25 +79,50 @@ namespace Курсач1
             Console.WriteLine("очередной транш. Антон выплатил кредит за два транша, переводя в первый");
             Console.WriteLine("раз 510 тыс. рублей, во второй - 649 тыс. рублей. Под какой процент банк");
             Console.WriteLine("выдал кредит Антону?");
-            Console.WriteLine("Введите общий долг");
-            s = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите х1");
-            x1 = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Введите х2");
-            x2 = Convert.ToDouble(Console.ReadLine());
+            while (true)
+            {
+                Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
+                variable = Convert.ToInt32(Console.ReadLine());
+                if (variable == 1)
+                {
+                    credit = 1000000;
+                    x1 = 510000;
+                    x2 = 649000;
+                    break;
+                }
+                else if (variable == 2)
+                {
+                    Console.WriteLine("Введите общий долг");
+                    credit = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Введите х1");
+                    x1 = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Введите х2");
+                    x2 = Convert.ToDouble(Console.ReadLine());
+                    break;
+                }
+            }
         }
         public void Getresult()
         {
-            double d = (x1 * x1) + 4 * x2 * s;
+            d = (x1 * x1) + 4 * x2 * credit;
             if (d < 0)
             {
                 Console.WriteLine("решений нет");
             }
             else
             {
-                p = (x1 + Math.Sqrt(d)) / (2 * s);
-                Console.WriteLine("Ответ: " + (p-1)*100);
-                Console.WriteLine("d: " + d);
+                percent = (x1 + Math.Sqrt(d)) / (2 * credit);
+                percentWithMinus = (x1 - Math.Sqrt(d)) / (2 * credit);
+                if (percent > 0)
+                {
+                    percent = (percent - 1) * 100;
+                    Console.WriteLine("Ответ: " + Math.Round(percent));
+                }
+                else if (percentWithMinus > 0)
+                {
+                    percentWithMinus = (percentWithMinus - 1) * 100;
+                    Console.WriteLine("Ответ: " + Math.Round(percentWithMinus));
+                }
             }
             
         }
