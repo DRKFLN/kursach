@@ -22,7 +22,11 @@ namespace Курсач1
             {
                 Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
                 variable = Convert.ToInt32(Console.ReadLine());
+<<<<<<< HEAD
                 if (variable == 1)
+=======
+                 if (variable == 1)
+>>>>>>> master
                 {
                     procent = 1;
                     dolg = 1000000;
@@ -64,10 +68,17 @@ namespace Курсач1
     {
         //кредит
         double s = 1000000;
+<<<<<<< HEAD
         double x1 = 510000;
         double x2 = 649000;
         double p = 0;
         //double b = 1 + b/100;
+=======
+        double b;
+        double x1 = 510000;
+        double x2 = 649000;
+
+>>>>>>> master
 
         public void text()
         {
