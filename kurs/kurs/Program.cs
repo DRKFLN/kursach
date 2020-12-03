@@ -10,7 +10,7 @@ namespace Курсач1
         double platezh;
         double mounth;
         int variable;
-        public void text()
+        public void Text()
         {
             Console.WriteLine("1 января 2015 года Павел Витальевич взял в банке 1 млн. рублей в кредит.");
             Console.WriteLine("Схема выплаты кредита следующая: 1 числа каждого следующего месяца банк начисляет");
@@ -22,11 +22,8 @@ namespace Курсач1
             {
                 Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
                 variable = Convert.ToInt32(Console.ReadLine());
-<<<<<<< HEAD
-                if (variable == 1)
-=======
                  if (variable == 1)
->>>>>>> master
+
                 {
                     procent = 1;
                     dolg = 1000000;
@@ -47,7 +44,7 @@ namespace Курсач1
             }
 
         }
-        public void getresult()
+        public void Getresult()
         {
             do
             {
@@ -68,19 +65,13 @@ namespace Курсач1
     {
         //кредит
         double s = 1000000;
-<<<<<<< HEAD
         double x1 = 510000;
         double x2 = 649000;
-        double p = 0;
-        //double b = 1 + b/100;
-=======
-        double b;
-        double x1 = 510000;
-        double x2 = 649000;
+        double p;
+        
 
->>>>>>> master
 
-        public void text()
+        public void Text()
         {
             Console.WriteLine("31 декабря 2014 года Антон взял в банке 1 млн. рублей в кредит. Схема");
             Console.WriteLine("выплаты кредита следующая: 31 декабря каждого следующего года банк");
@@ -96,7 +87,7 @@ namespace Курсач1
             Console.WriteLine("Введите х2");
             x2 = Convert.ToDouble(Console.ReadLine());
         }
-        public void getresult()
+        public void Getresult()
         {
             double d = (x1 * x1) + 4 * x2 * s;
             if (d < 0)
@@ -118,7 +109,7 @@ namespace Курсач1
         double b = 1.03;
         int n = 9;
         double S;
-        public void text()
+        public void Text()
         {
             Console.WriteLine("15 января планируется взять кредит в банке на 9 месяцев. Условия его возврата таковы:\n");
             Console.WriteLine("- 1-го числа каждого месяца долг возврастает на 3% по сравнению с концом");
@@ -130,7 +121,7 @@ namespace Курсач1
             Console.WriteLine("Известно, что на пятый месяц кредитования нужно выплатить 57,5 тыс. рублей.");
             Console.WriteLine("какую сумму нужно вернуть банку в течении всего срока кредитования?");
         }
-        public void getresult()
+        public void Getresult()
         {
              
         }
@@ -152,16 +143,16 @@ namespace Курсач1
                     switch (variable)
                     {
                         case 1:
-                            t1.text();
-                            t1.getresult();
+                            t1.Text();
+                            t1.Getresult();
                             break;
                         case 2:
-                            t2.text();
-                            t2.getresult();
+                            t2.Text();
+                            t2.Getresult();
                             break;
                         case 3:
-                            t3.text();
-                            t3.getresult();
+                            t3.Text();
+                            t3.Getresult();
                             break;
 
                     }

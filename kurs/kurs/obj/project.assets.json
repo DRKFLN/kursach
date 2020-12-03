@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 {
   "version": 3,
   "targets": {
@@ -15,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj",
+      "projectUniqueName": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
       "projectName": "kurs",
-      "projectPath": "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj",
+      "projectPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
       "packagesPath": "C:\\Users\\arata\\.nuget\\packages\\",
-      "outputPath": "C:\\Programming\\kursach\\kurs\\kurs\\obj\\",
+      "outputPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -64,66 +63,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
-=======
-{
-  "version": 3,
-  "targets": {
-    ".NETCoreApp,Version=v3.1": {}
-  },
-  "libraries": {},
-  "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
-  },
-  "packageFolders": {
-    "/home/drkfln/.nuget/packages/": {}
-  },
-  "project": {
-    "version": "1.0.0",
-    "restore": {
-      "projectUniqueName": "/home/drkfln/GitHub/kursach/kurs/kurs/kurs.csproj",
-      "projectName": "kurs",
-      "projectPath": "/home/drkfln/GitHub/kursach/kurs/kurs/kurs.csproj",
-      "packagesPath": "/home/drkfln/.nuget/packages/",
-      "outputPath": "/home/drkfln/GitHub/kursach/kurs/kurs/obj/",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "/home/drkfln/.config/NuGet/NuGet.Config"
-      ],
-      "originalTargetFrameworks": [
-        "netcoreapp3.1"
-      ],
-      "sources": {
-        "https://api.nuget.org/v3/index.json": {}
-      },
-      "frameworks": {
-        "netcoreapp3.1": {
-          "projectReferences": {}
-        }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
-      }
-    },
-    "frameworks": {
-      "netcoreapp3.1": {
-        "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
-        ],
-        "assetTargetFallback": true,
-        "warn": true
-      }
-    }
-  }
->>>>>>> Stashed changes
 }

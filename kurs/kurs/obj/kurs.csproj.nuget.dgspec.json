@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj": {}
+    "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj": {}
   },
   "projects": {
-    "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj": {
+    "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj",
+        "projectUniqueName": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
         "projectName": "kurs",
-        "projectPath": "C:\\Programming\\kursach\\kurs\\kurs\\kurs.csproj",
+        "projectPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\kurs.csproj",
         "packagesPath": "C:\\Users\\arata\\.nuget\\packages\\",
-        "outputPath": "C:\\Programming\\kursach\\kurs\\kurs\\obj\\",
+        "outputPath": "C:\\Users\\arata\\source\\GitHub\\kursach\\kurs\\kurs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
