@@ -66,6 +66,7 @@ namespace Курсач1
         double s = 1000000;
         double x1 = 510000;
         double x2 = 649000;
+        double p = 0;
         //double b = 1 + b/100;
 
         public void text()
@@ -77,10 +78,27 @@ namespace Курсач1
             Console.WriteLine("очередной транш. Антон выплатил кредит за два транша, переводя в первый");
             Console.WriteLine("раз 510 тыс. рублей, во второй - 649 тыс. рублей. Под какой процент банк");
             Console.WriteLine("выдал кредит Антону?");
+            Console.WriteLine("Введите общий долг");
+            s = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите х1");
+            x1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Введите х2");
+            x2 = Convert.ToDouble(Console.ReadLine());
         }
         public void getresult()
         {
-
+            double d = (x1 * x1) + 4 * x2 * s;
+            if (d < 0)
+            {
+                Console.WriteLine("решений нет");
+            }
+            else
+            {
+                p = (x1 + Math.Sqrt(d)) / (2 * s);
+                Console.WriteLine("Ответ: " + (p-1)*100);
+                Console.WriteLine("d: " + d);
+            }
+            
         }
     }
     class Task3
@@ -103,17 +121,7 @@ namespace Курсач1
         }
         public void getresult()
         {
-            //Долга с процентом
-            //s *= b;
-
-            //
-            //Выплата
-
-            //
-            //Долг после выплаты
-
-            //
-            //Вывод
+             
         }
     }
     class Program
