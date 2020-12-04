@@ -2,7 +2,7 @@
 using System.Diagnostics;
 namespace Курсач1
 {
-    public class Shared_Variables
+    public abstract class Shared_Variables
     {
         public int variable;//переменная для определения выбора
         public int thing = 0; //отыечает за выход из непреднамеренного бесконечного цикла
@@ -11,7 +11,6 @@ namespace Курсач1
     }
     class Task1 : Shared_Variables
     {
-        Shared_Variables sh = new Shared_Variables();
         double debt;//долг
         double payment;//платеж
         public void Text()
