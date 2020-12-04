@@ -5,9 +5,9 @@ namespace Курсач1
     public abstract class Shared_Variables
     {
         public int variable;//переменная для определения выбора
-        public int thing = 0; //отыечает за выход из непреднамеренного бесконечного цикла
-        public double mounth;
-        public double percent;
+        public int thing = 0; //отвечает за выход из непреднамеренного бесконечного цикла
+        public double mounth; //количество месяцев
+        public double percent;//процент
     }
     class Task1 : Shared_Variables
     {
