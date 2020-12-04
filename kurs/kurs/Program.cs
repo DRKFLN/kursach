@@ -128,12 +128,12 @@ namespace Курсач1
     }
     class Task3
     {
-        double p; //percent
-        double k; //выплата за месяц
-        double n = 9; //mounth
-        double B;
+        double percent; //процент
+        double knownPaymentMouth; //известный месяц выплат
+        double mounth = 9; //колличество месяцев
+        double paymentForMounth;//выплата за известный месяц
         double S; //сумма за 5 месяцев
-        int variable;
+        int variable;//переменная выбора(нужна для работы интерфейса)
         public void Text()
         {
             Console.WriteLine("15 января планируется взять кредит в банке на 9 месяцев. Условия его возврата таковы:\n");
@@ -151,34 +151,34 @@ namespace Курсач1
                 variable = Convert.ToInt32(Console.ReadLine());
                 if (variable == 1)
                 {
-                    p = 3;
-                    n = 9;
-                    k = 5;
-                    B = 57.5;
+                    percent = 3;
+                    mounth = 9;
+                    knownPaymentMouth = 5;
+                    paymentForMounth = 57.5;
                     break;
                 }
                 else if (variable == 2)
                 {
                     Console.WriteLine("Введите процент");
-                    p = Convert.ToDouble(Console.ReadLine());
+                    percent = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Введите колличество месяцев");
-                    n = Convert.ToInt32(Console.ReadLine());
+                    mounth = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Введите месяц с известной выплатой");
-                    k = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Введите выплату на " + n + " месяц");
-                    B = Convert.ToDouble(Console.ReadLine());
+                    knownPaymentMouth = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите выплату на " + mounth + " месяц");
+                    paymentForMounth = Convert.ToDouble(Console.ReadLine());
                     break;
                 }
             }
         }
         public void Getresult()
         {
-            p = 1 + p / 100;
-            S = (B * n) / ((k*p)-(k-1));
+            percent = 1 + percent / 100;
+            S = (paymentForMounth * mounth) / ((knownPaymentMouth * percent)-(knownPaymentMouth - 1));
             Console.WriteLine("Сумма выплат за 5 месяцев убдет равна: " + Math.Round(S));
-            for (int i = Convert.ToInt32(k + 1); i <= n; i++)
+            for (int i = Convert.ToInt32(knownPaymentMouth + 1); i <= mounth; i++)
             {
-                S = S + (n - 1) * (S * p / n) - (n - 2) * S / n;
+                S = S + (mounth - 1) * (S * percent / mounth) - (mounth - 2) * S / mounth;
             }
             Console.WriteLine("Сумма станет равна: " + Math.Round(S));
         }
