@@ -1,4 +1,3 @@
-C:\Users\arata\source\GitHub\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.csprojAssemblyReference.cache
 C:\Users\arata\source\GitHub\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.AssemblyInfoInputs.cache
 C:\Users\arata\source\GitHub\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.AssemblyInfo.cs
 C:\Users\arata\source\GitHub\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.csproj.CoreCompileInputs.cache

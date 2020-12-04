@@ -123,16 +123,16 @@ namespace Курсач1
                     percentWithMinus = (percentWithMinus - 1) * 100;
                     Console.WriteLine("Ответ: " + Math.Round(percentWithMinus));
                 }
-            }
-            
+            }  
         }
     }
     class Task3
     {
-        double r = 3;
-        double b;
-        int n = 9;
-        double S;
+        double p; //percent
+        double k; //выплата за месяц
+        double n = 9; //mounth
+        double B;
+        double S; //сумма за 5 месяцев
         int variable;
         public void Text()
         {
@@ -151,29 +151,36 @@ namespace Курсач1
                 variable = Convert.ToInt32(Console.ReadLine());
                 if (variable == 1)
                 {
-                    r = 3;
-                    b = 3/100;
+                    p = 3;
                     n = 9;
-                    S = 57.5;
+                    k = 5;
+                    B = 57.5;
                     break;
                 }
                 else if (variable == 2)
                 {
+                    Console.WriteLine("Введите процент");
+                    p = Convert.ToDouble(Console.ReadLine());
                     Console.WriteLine("Введите колличество месяцев");
                     n = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Введите долг на 5 месяц");
-                    S = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("Введите процент");
-                    r = Convert.ToDouble(Console.ReadLine());
-                    r = r / 100;
+                    Console.WriteLine("Введите месяц с известной выплатой");
+                    k = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите выплату на " + n + " месяц");
+                    B = Convert.ToDouble(Console.ReadLine());
                     break;
                 }
             }
         }
         public void Getresult()
         {
-            S = S * n;
-            Console.WriteLine("Ответ: " + S);
+            p = 1 + p / 100;
+            S = (B * n) / ((k*p)-(k-1));
+            Console.WriteLine("Сумма выплат за 5 месяцев убдет равна: " + Math.Round(S));
+            for (int i = Convert.ToInt32(k + 1); i <= n; i++)
+            {
+                S = S + (n - 1) * (S * p / n) - (n - 2) * S / n;
+            }
+            Console.WriteLine("Сумма станет равна: " + Math.Round(S));
         }
     }
     class Program
@@ -204,7 +211,6 @@ namespace Курсач1
                             t3.Text();
                             t3.Getresult();
                             break;
-
                     }
                     Console.WriteLine("Продолжить?\n1.Да 2.Нет");
                     cont = Convert.ToInt32(Console.ReadLine());
@@ -224,7 +230,6 @@ namespace Курсач1
                     }
                 }
             }
-
         }
     }
 }
