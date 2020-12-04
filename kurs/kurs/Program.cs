@@ -130,9 +130,10 @@ namespace Курсач1
     class Task3
     {
         double r = 3;
-        double b = 1.03;
+        double b;
         int n = 9;
         double S;
+        int variable;
         public void Text()
         {
             Console.WriteLine("15 января планируется взять кредит в банке на 9 месяцев. Условия его возврата таковы:\n");
@@ -144,10 +145,35 @@ namespace Курсач1
             Console.WriteLine("долга на 15-е число предыдущего месяца.\n");
             Console.WriteLine("Известно, что на пятый месяц кредитования нужно выплатить 57,5 тыс. рублей.");
             Console.WriteLine("какую сумму нужно вернуть банку в течении всего срока кредитования?");
+            while (true)
+            {
+                Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
+                variable = Convert.ToInt32(Console.ReadLine());
+                if (variable == 1)
+                {
+                    r = 3;
+                    b = 3/100;
+                    n = 9;
+                    S = 57.5;
+                    break;
+                }
+                else if (variable == 2)
+                {
+                    Console.WriteLine("Введите колличество месяцев");
+                    n = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Введите долг на 5 месяц");
+                    S = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Введите процент");
+                    r = Convert.ToDouble(Console.ReadLine());
+                    r = r / 100;
+                    break;
+                }
+            }
         }
         public void Getresult()
         {
-             
+            S = S * n;
+            Console.WriteLine("Ответ: " + S);
         }
     }
     class Program
