@@ -23,4 +23,3 @@ C:\Programming\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.csproj.CoreCompile
 C:\Programming\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.dll
 C:\Programming\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.pdb
 C:\Programming\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.genruntimeconfig.cache
-C:\Users\arata\source\GitHub\kursach\kurs\kurs\obj\Debug\netcoreapp3.1\kurs.csprojAssemblyReference.cache

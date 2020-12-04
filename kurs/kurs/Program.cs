@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Diagnostics;
-
 namespace Курсач1
 {
-    class Task1
+    public class Shared_Variables
     {
-        double percent;//процент
+        public int variable;//переменная для определения выбора
+        public int thing = 0; //отыечает за выход из непреднамеренного бесконечного цикла
+        public double mounth;
+        public double percent;
+    }
+    class Task1 : Shared_Variables
+    {
+        Shared_Variables sh = new Shared_Variables();
         double debt;//долг
         double payment;//платеж
-        double mounth;//счетчик месяца
-        int variable;//переменная для определения выбора
         public void Text()
         {
             Console.WriteLine("1 января 2015 года Павел Витальевич взял в банке 1 млн. рублей в кредит.");
@@ -22,7 +26,7 @@ namespace Курсач1
             {
                 Console.WriteLine("\nОставить данные исходными или ввести свои?\n1.Оставить исходные данные\n2.Изменить исходные данные");
                 variable = Convert.ToInt32(Console.ReadLine());
-                 if (variable == 1)
+                if (variable == 1)
 
                 {
                     percent = 1;
@@ -42,7 +46,6 @@ namespace Курсач1
                     break;
                 }
             }
-
         }
         public void Getresult()
         {
@@ -56,20 +59,27 @@ namespace Курсач1
                 debt -= payment;
                 mounth += 1;
                 Console.WriteLine("В " + mounth + "-м месяце долг будет равен " + debt + " процент = " + percent);
+                thing += 1;
+                if (thing == 100)
+                {
+                    Console.WriteLine("ограничение в 100 итераций цикла нарушенно.\nвыход из цикла");
+                    break;
+                }
             }
             while (debt > 0);
-            Console.WriteLine("Ответ: При данных условиях Павел Витальевич может взять кредит на " + --mounth + " месяцев");
+            if (thing != 100)
+            {
+                Console.WriteLine("Ответ: При данных условиях Павел Витальевич может взять кредит на " + --mounth + " месяцев");
+            }
         }
     }
-    class Task2
+    class Task2 : Shared_Variables
     {
         double credit; //кредит
         double x1; //первая выплата
         double x2; //вторая выплата
-        double percent; //процент с положительным знаком
         double percentWithMinus;//процент с отрицательным знаком
         double d;//дискриминант
-        int variable;//переменная выбора(нужна для работы интерфейса)
         public void Text()
         {
             Console.WriteLine("31 декабря 2014 года Антон взял в банке 1 млн. рублей в кредит. Схема");
@@ -126,14 +136,11 @@ namespace Курсач1
             }  
         }
     }
-    class Task3
+    class Task3 : Shared_Variables
     {
-        double percent; //процент
         double knownPaymentMouth; //известный месяц выплат
-        double mounth = 9; //колличество месяцев
         double paymentForMounth;//выплата за известный месяц
         double S; //сумма за 5 месяцев
-        int variable;//переменная выбора(нужна для работы интерфейса)
         public void Text()
         {
             Console.WriteLine("15 января планируется взять кредит в банке на 9 месяцев. Условия его возврата таковы:\n");
@@ -179,8 +186,17 @@ namespace Курсач1
             for (int i = Convert.ToInt32(knownPaymentMouth + 1); i <= mounth; i++)
             {
                 S = S + (mounth - 1) * (S * percent / mounth) - (mounth - 2) * S / mounth;
+                thing += 1;
+                if (thing == 100)
+                {
+                    Console.WriteLine("ограничение в 100 итераций цикла нарушенно.\nвыход из цикла");
+                    break;
+                }
             }
-            Console.WriteLine("Сумма станет равна: " + Math.Round(S));
+            if (thing != 100)
+            {
+                Console.WriteLine("Сумма станет равна: " + Math.Round(S));
+            }
         }
     }
     class Program
@@ -193,8 +209,7 @@ namespace Курсач1
             int cont = 1;
             int cls;
             while (true)
-            {
-                
+            {       
                 if (cont == 1)
                 {
                     Console.Write("Выберите номер задачи(1-3): ");
@@ -227,6 +242,7 @@ namespace Курсач1
                         if (cls == 1)
                         {
                             Console.Clear();
+                            break;
 
                         }
                         else if (cls == 2)
