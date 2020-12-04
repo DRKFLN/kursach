@@ -190,9 +190,11 @@ namespace Курсач1
             Task1 t1 = new Task1();
             Task2 t2 = new Task2();
             Task3 t3 = new Task3();
+            int cont = 1;
+            int cls;
             while (true)
             {
-                int cont = 1;
+                
                 if (cont == 1)
                 {
                     Console.Write("Выберите номер задачи(1-3): ");
@@ -218,15 +220,19 @@ namespace Курсач1
                     {
                         Environment.Exit(0);
                     }
-                    Console.WriteLine("Очистить консоль?\n1.Да 2.Нет");
-                    cont = Convert.ToInt32(Console.ReadLine());
-                    if (cont == 1)
+                    while (true)
                     {
-                        Console.Clear();
-                    }
-                    else
-                    {
-                        break;
+                        Console.WriteLine("Очистить консоль?\n1.Да 2.Нет");
+                        cls = Convert.ToInt32(Console.ReadLine());
+                        if (cls == 1)
+                        {
+                            Console.Clear();
+
+                        }
+                        else if (cls == 2)
+                        {
+                            break;
+                        }
                     }
                 }
             }
